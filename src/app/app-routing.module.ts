@@ -16,6 +16,7 @@ const routes: Routes = [
     path: 'about',
     loadChildren: () => import('../app/pages/about/about.module').then(mod => mod.AboutModule)
   },
+  { path: '**', redirectTo: '' }
 ];
 
 @NgModule({
