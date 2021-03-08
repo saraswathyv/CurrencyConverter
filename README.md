@@ -2,7 +2,7 @@
 
 ## Description
 
-Single page application with the functionality of transferring money and showing the past transactions in a historical transactions list.
+Single page application - Web-based currency converter to calculate exchange rates for currencies
 
 
 ## Features
