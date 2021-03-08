@@ -1,4 +1,4 @@
-# Front End Assignment: Make A Transaction
+# Front End Assignment: Currency Converter
 
 ## Description
 
@@ -50,12 +50,14 @@ Single page application with the functionality of transferring money and showing
 <img src="./src/assets/codedesign.png">
 
 ## Other Requirements
-
+- Added components in modular and resuable way
+- Added about page to show routing functionality
+- Added Auth Guard to demostrate authentication functionality (true as default now)
 - Basic Unit testcases are covered to demonstrate knowledge.
 - Basic E2E testing are covered to demonstrate knowledge.
 
 
-# PeachtreeBankDemo
+# currency-converter
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.2.2.
 
