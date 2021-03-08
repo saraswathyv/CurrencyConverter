@@ -1,0 +1,36 @@
+.mat-toolbar {
+    background-color: white;
+    border: solid 1px #ccc;
+
+    .logo {
+        color: #0abf53;
+        font-size: 1.5rem;
+        font-weight: 600;
+    }
+
+    a {
+        text-decoration: none;
+        color: inherit
+    }
+
+    .navigation-items {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        cursor: pointer;
+        font-size: 1rem;
+        color: grey
+      }
+      
+}
+
+.spacer {
+    flex: 1 1 auto;
+}
+
+.float-right {
+    float: right;
+}
+
+
+

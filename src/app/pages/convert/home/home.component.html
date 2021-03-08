@@ -1,0 +1,9 @@
+
+<app-convert-currency></app-convert-currency>
+
+<div *ngIf="!errorMsg">
+  <app-conversion-details></app-conversion-details>
+  <app-exchange-rates-summary [baseCurrency]="baseCurrency"></app-exchange-rates-summary>
+</div>
+
+<app-error [errorMsg]="errorMsg"></app-error>

@@ -1,0 +1,30 @@
+<div class="card-container">
+  <mat-card>
+    <mat-card-title> Exchange Rates of {{baseCurrency}}</mat-card-title>
+    <mat-card-content>
+      <div class="container">
+       <div class="float-right">
+        <mat-form-field>
+          <input matInput #searchInput (keyup)="applySearchFilter($event.target['value'])" placeholder="Search">
+        </mat-form-field>
+       </div>
+        <table mat-table [dataSource]="dataSource" matSort class="w-75">
+    
+          <ng-container matColumnDef="currency">
+            <th mat-header-cell *matHeaderCellDef mat-sort-header> Quote Currency </th>
+            <td mat-cell *matCellDef="let element">
+                {{element.currency}}
+            </td>
+          </ng-container>
+    
+          <ng-container matColumnDef="rate">
+            <th mat-header-cell *matHeaderCellDef mat-sort-header> Rate </th>
+            <td mat-cell *matCellDef="let element"> {{element.rate | number: '1.5-5' }} </td>
+          </ng-container>
+          <tr mat-header-row *matHeaderRowDef="displayedColumns; sticky: true"></tr>
+          <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+        </table>
+      </div>
+    </mat-card-content>
+  </mat-card>
+</div>

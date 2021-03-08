@@ -1,0 +1,92 @@
+<div class="card-container">
+  <mat-card>
+    <mat-card-content>
+      <form
+        [formGroup]="currencyConverterForm"
+        (ngSubmit)="convert()"
+        novalidate>
+        <mat-form-field appearance="outline">
+          <mat-label>Enter Amount</mat-label>
+          <input
+            matInput
+            placeholder="Amount"
+            id="amount"
+            [formControlName]="formNames.Amount"
+            type="number"
+            (keyup)="onInputChange()"
+          />
+        </mat-form-field>
+        <mat-form-field appearance="outline">
+          <mat-label>From Currency</mat-label>
+          <input
+            type="text"
+            placeholder="From"
+            name="fromCurrency"
+            aria-label="From"
+            matInput
+            [formControlName]="formNames.FromCurrency"
+            [matAutocomplete]="fromAutocomplete"
+          />
+          <mat-autocomplete
+            #fromAutocomplete="matAutocomplete"
+            (optionSelected)="onInputChange()">
+            <mat-option
+              *ngFor="let fromItem of filteredFromCurrencies | async"
+              [value]="fromItem">
+              {{ fromItem }}
+            </mat-option>
+          </mat-autocomplete>
+        </mat-form-field>
+        <div class="converter-btn">
+          <button
+            type="button"
+            mat-icon-button
+            class="reverse-btn"
+            color="accent"
+            (click)="swapCurrencies()"
+            aria-label="Swap currencies"
+          >
+            <mat-icon>compare_arrows</mat-icon>
+          </button>
+        </div>
+        <mat-form-field appearance="outline">
+          <mat-label>To Currency</mat-label>
+          <input
+            type="text"
+            placeholder="To"
+            aria-label="To"
+            matInput
+            [formControlName]="formNames.ToCurrency"
+            [matAutocomplete]="toAutocomplete"
+          />
+          <mat-autocomplete
+            #toAutocomplete="matAutocomplete"
+            (optionSelected)="onInputChange()"
+          >
+            <mat-option
+              *ngFor="let toItem of filteredToCurrencies | async"
+              [value]="toItem"
+            >
+              {{ toItem }}
+            </mat-option>
+          </mat-autocomplete>
+        </mat-form-field>
+
+        <mat-form-field>
+          <mat-label>Select Date</mat-label>
+          <input
+            matInput
+            required
+            (dateChange)="onInputChange()"
+            [formControlName]="formNames.Date"
+            [matDatepicker]="date"
+            [max]="today"
+          />
+          <mat-datepicker-toggle matSuffix [for]="date"></mat-datepicker-toggle>
+          <mat-datepicker #date></mat-datepicker>
+        </mat-form-field>
+      </form>
+    </mat-card-content>
+  </mat-card>
+  <!-- <div *ngIf="errorMsg" class="error-msg"> {{errorMsg}} </div> -->
+</div>

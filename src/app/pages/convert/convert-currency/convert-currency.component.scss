@@ -1,0 +1,31 @@
+.converter-container {
+    margin: 5%;
+    padding: 25px;
+  
+    .reverse-btn:hover {
+        border: 1px solid;
+    }
+  }
+
+  .converter-btn {
+    margin-bottom: 1rem !important;
+    
+    .mat-icon {
+      border: solid 1px;
+      border-radius: 50%;
+    }
+  }
+
+  form {
+    flex-direction: row;
+    box-sizing: border-box;
+    display: flex;
+    place-content: center space-evenly;
+    align-items: center;
+    display: inline-flex;
+    flex-flow: row wrap;
+    .mat-form-field, app-date-picker, .converter-btn  {
+      margin:  0 1rem
+    }
+  }
+  
