@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "currency-converter-2edfb": {
+      "hosting": {
+        "currency-converter": [
+          "currency-converter-2edfb"
+        ]
+      }
+    }
+  }
+}
