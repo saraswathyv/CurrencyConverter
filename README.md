@@ -1,45 +1,64 @@
-# Front End Assignment: Currency Converter
+# Front End Assignment: Make A Transaction
 
 ## Description
 
-Single page application - Currency converter to calculate exchange rates for currencies
+Single page application with the functionality of transferring money and showing the past transactions in a historical transactions list.
 
 
 ## Features
 
 <img src="./src/assets/workflow.gif">
 
-### Transfer Money ###
+### Currency Coversion ###
 
-- From account is pre-populated and disabled.
-- Select "To Account" field
+- By default when user navigates to page, Amount, From and To fields are pre-populated (with Euro to USD)
 - Enter "Amount" field
-- Press "Submit" button and Preview entered details
-- Press "Transfer" button on the Preview Screen
-- New Transfer appears in top of the list.
-- If user enter amount beyond a balance of $ -500.00, error appears and Submit button is disabled.
+- Select "From Currency" from populated list. It filters as user types in.
+- Select "To Currency" from populated list. It filters as user types in.
+- Conversion Details is automatically populated along with Current Date conversion rates.
 
-### Search Transactions ###
+### Select Date for Conversion Rate ###
 
-- All transactions can be view in the transactions list
-- Type in search field to search any transactions.
-- Sort transactions by Date, Beneficiary and Amount by pressing sort button.
+- Enter "Amount" field
+- Select "From Currency" from populated list. It filters as user types in.
+- Select "To Currency" from populated list. It filters as user types in.
+- Select "Date" from Date Picker.
+- Conversion Details is automatically populated along with the Selected Date conversion rates.
 
-### Multi-Language Support ###
+### Bidirectional Conversion  ###
 
-- Select the language on the right top of the page.
-- Translate version of application is loaded.
+- Enter "Amount" field
+- Select "From Currency" from populated list. It filters as user types in.
+- Select "To Currency" from populated list. It filters as user types in.
+- Conversion Details is automatically populated along with the Selected Date conversion rates.
+- Click "Swap" icon in between From Currency and To Currency
+- Conversion Details is automatically populated for selected currency types.
 
+
+### View all Exchange Rates  ###
+
+- Exchange Rates for the Base Currency for all currencies is populated in the table.
+- User can search for a currency by typing in Search Filter
+- User can sort the rates and currency. 
+
+### About Page to view details of the application  ###
+
+- Click "About" link in the top right navigation bar to view details of application.
+
+### Code Structure ###
+
+<img src="./src/assets/codedesign.png">
 
 ## Other Requirements
 
 - Basic Unit testcases are covered to demonstrate knowledge.
-- Basic E2E testing are covered.
+- Basic E2E testing are covered to demonstrate knowledge.
 
 
-# CurrencyConverter
+# PeachtreeBankDemo
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.2.2.
+
 
 ## Development server
 
@@ -60,7 +79,3 @@ Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.
 ## Running end-to-end tests
 
 Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.

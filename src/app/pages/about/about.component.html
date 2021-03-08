@@ -1,21 +1,42 @@
 <article itemprop="text">
   <h1>Angular Currency Converter/Calculator</h1>
-  <p>Working with latest Angular 8.</p>
   
-  <h2>Usage</h2>
+  
+  <h2>Features</h2>
 
-  <p>On successful load, application navigates user automatically to Exchange Rates Home page. Currency Converter form fields are pre-populated.</p>
-  <p>User can enter Amount, Base Currency and Quote Currency</p>
-  <p>The converstion rate is shown automatically as user selects the field.</p>
-  <p>User can swap currencies by clicking on Reverse icon button located between currency select form
-    fields.</p>
-    <p>User can select a past date to see the conversion rate(Historical rate)</p>
-  <p>User can view all the Quote Currency exchange rates of selected Base currency </p>
-  <p>User can filter the quote currency in the exchange rates table</p>
-  <p>Basic Unit test cases are covered</p>
-  <h2>To Do</h2>
+  <h3> Currency Coversion </h3>
+
   <ul>
-    <li>Unit test application components/services</li>
-    <li>Extract Util functions and reusable components</li>
-  </ul>
+  <li> By default when user navigates to page, Amount, From and To fields are pre<li>populated (with Euro to USD) </li>
+  <li> Enter "Amount" field</li>
+  <li> Select "From Currency" from populated list. It filters as user types in.</li>
+  <li> Select "To Currency" from populated list. It filters as user types in.</li>
+  <li> Conversion Details is automatically populated along with Current Date conversion rates.</li>
+</ul>
+  
+  <h3> Select Date for Conversion Rate </h3>
+  <ul>
+  <li> Enter "Amount" field</li>
+  <li> Select "From Currency" from populated list. It filters as user types in.</li>
+  <li> Select "To Currency" from populated list. It filters as user types in.</li>
+  <li> Select "Date" from Date Picker.</li>
+  <li> Conversion Details is automatically populated along with the Selected Date conversion rates.</li>
+</ul>
+
+  <h3> Bidirectional Conversion  </h3>
+<ul>
+  <li> Enter "Amount" field</li>
+  <li> Select "From Currency" from populated list. It filters as user types in.</li>
+  <li> Select "To Currency" from populated list. It filters as user types in.</li>
+  <li> Conversion Details is automatically populated along with the Selected Date conversion rates.</li>
+  <li> Click "Swap" icon in between From Currency and To Currency</li>
+  <li> Conversion Details is automatically populated for selected currency types.</li>
+</ul>  
+  
+  <h3> View all Exchange Rates  </h3>
+  <ul>
+  <li> Exchange Rates for the Base Currency for all currencies is populated in the table.</li>
+  <li> User can search for a currency by typing in Search Filter</li>
+  <li> User can sort the rates and currency. </li>
+</ul>  
 </article>
